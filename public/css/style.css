@@ -1,0 +1,266 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Raleway', sans-serif;
+}
+
+:root{
+    --main-bg:rgb(56, 56, 56);
+    --main-color:rgb(12, 147, 224);
+}
+
+html{
+    font-size: 62.5%;
+}
+body{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.row{
+    margin: 0;
+
+}
+
+.main_menu{
+    background-color: var(--main-bg);
+}
+
+.navbar{
+    color: white;
+    background-color: var(--main-bg);
+    padding: 1rem 0;
+    
+}
+.navbar a{
+    color: white;
+    font-size: 1.8rem;
+    
+}
+.navbar-nav a:hover{
+    color:var(--main-color);
+    
+    
+}
+.navbar li{
+    margin-left: 2rem;
+}
+.navbar .navbar-brand{
+    font-weight: 700;
+}
+
+.navbar-toggler{
+    /* color:white ; */
+    background-color: rgb(6, 199, 157);
+}
+.fa-snowflake{
+    /* transition: all linear; */
+    animation: animate 2s linear infinite;
+    /* color: var(--main-color); */
+}
+
+@keyframes animate{
+    0%{
+       transform:rotate(0deg);
+    }
+    100%{
+        transform:rotate(360deg);
+    }
+}
+
+/* main header */
+
+.main-header_left{
+    height: 70rem;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+.main-header_left p{
+    font-size: 2rem;
+}
+.main-header_left h1{
+    font-size: 4rem;
+    margin: 1rem 0rem 3rem 0rem;
+    text-transform: capitalize;
+}
+.main-header_left .text-clr{
+    color: var(--main-color);
+}
+.main-header_left button{
+    border: none;
+    padding: 0.6rem 1.8rem;
+    font-size: 1.7rem;
+    border-radius: 2rem;
+    text-transform: uppercase;
+    box-shadow: 0 8px 6px -4px black;
+    outline: none;
+}
+.main-header_left button:hover{
+    box-shadow:0px 8px 6px -4px var(--main-color);
+    color: var(--main-color);
+    font-weight: 500;
+}
+
+.main-header_right{
+    height: 70rem;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+/* .main-header_right figure img{
+
+} */
+.errimg img{
+    width: 60rem;
+    height: 30rem;
+    
+}
+.temp-form{
+    width: 60%;
+    position: relative;
+    margin: 10rem auto 6rem;
+}
+
+.temp-form input[type="text"]{
+    width: 100%;
+    padding: 1rem 5rem 1rem 2rem;
+    background-color: black;
+    color: aliceblue;
+    outline: none;
+    border: none;
+    font-size: 1.7rem;
+    border-radius: 3rem;
+}
+::placeholder{
+    color: #bfc1c8;
+}
+.temp-form input[type="submit"]{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    bottom: 5px;
+    border: none;
+    border-radius: 2rem;
+    background: #009ad8;
+    padding: 0 2rem;
+    color: azure;
+    font-size: 1.6rem;
+}
+
+.temp-form input[type="submit"]:hover{
+    color: rgb(255, 255, 255);
+    background-color: rgb(37, 37, 37);
+}
+
+.tempInformation {
+    width: 40rem;
+    margin: auto;
+    min-height: 20rem;
+    background-color: rgb(78, 76, 76);
+    border-radius: 1rem;
+    /* padding: 1rem; */
+    
+}
+
+.top-layer{
+    width: 100%;
+    height: 20%;
+    background-color: blueviolet;
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    border-radius: 1rem;
+}
+.top-layer p{
+    color:aliceblue;
+    font-weight: 300;
+    padding: 2rem ;
+    font-size: 1.4rem;
+}
+.main-layer{
+    width: 100%;
+    height:80%;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem ;
+}
+
+.main-layer #city_name {
+    
+    color: aliceblue;
+    font-weight: 300;
+    font-size: 2rem;
+}
+.main-layer .middle-layer{
+    display: flex;
+    justify-content: space-around;
+    color: whitesmoke;
+}
+.main-layer .middle-layer p,
+.main-layer .middle-layer .fa {
+    font-size: 7rem;
+    font-weight: 900;
+}
+.fa{
+    color: aqua;
+}
+sup{
+    font-size: 6rem;
+    margin-top: -2rem;
+}
+
+.data-hide{
+    display: none;
+    visibility: hidden;
+    height: 0px;
+    /* width: 0px; */
+    transition: all 0.3s linear;
+}
+
+
+/* footer code */
+.footer{
+    width: 100%;
+    background-color: var(--main-bg);
+    margin-top: auto;
+    
+}
+.footer p{
+    margin: 0;
+    text-align: center;
+    color: white;
+    line-height: 5rem;
+    font-size: 1.4rem;
+}
+
+
+/* responsive code */
+@media(max-width :768px ){
+    .main-header_left{
+        height: auto;
+        margin: 5rem 0;
+        
+    }
+    .main-header_left h1{
+        margin-bottom: 2rem;
+    }
+    
+    .main-header_right{
+        height: auto;
+        margin-top: 3rem 0;
+    }
+    .temp-form {
+        width: auto;
+    }
+    .tempInformation {
+        width: auto;
+    }
+}
